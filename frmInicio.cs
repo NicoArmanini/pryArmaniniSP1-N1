@@ -17,7 +17,7 @@ namespace pryArmaniniSP1_N1
             InitializeComponent();
         }
 
-        int intentos = 3;
+        int intentos = 0;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if ((txtUsuario1.Text == "Administrador" &&
@@ -38,10 +38,10 @@ namespace pryArmaniniSP1_N1
             {
                 MessageBox.Show("Datos Incorrectos, Acceso Denegado.");
                 intentos++; // incrementa el contador de intentos fallidos
-                if (intentos == 3) // si es 3 se cierra el formulario
-                {
-                    this.Close();
-                }
+            }
+            if (intentos == 3) // si es 3 se cierra el formulario
+            {
+                this.Close();
             }
 
         }
